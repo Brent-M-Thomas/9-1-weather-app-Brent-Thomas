@@ -8,9 +8,7 @@ export default Ember.Route.extend({
       function success(position) {
         var latitude  = position.coords.latitude;
         var longitude = position.coords.longitude;
-        // return alert('your latitude is ' + latitude +
-        //   ' and your longitude is ' + longitude);
-        _this.transitionTo('weather', latitude, longitude);
+        _this.transitionTo('home.weather', latitude, longitude);
       }
 
       function error() {
