@@ -1,5 +1,6 @@
-<p>{{show-weather.latitude}}</p>
-<p>{{show-weather.longitude}}</p>
+{{#each model.daily.data as |day|}}
+    {{day.apparentTemperatureMax}}
 
+{{/each}}
 
 {{outlet}}
