@@ -1,6 +1,59 @@
-{{#each model.daily.data as |day|}}
-    {{day.apparentTemperatureMax}}
+<div class="current-weather-all">
+    <img class="current-weather-icon" src="{{model.currently.icon}}.jpg" alt="">
+    <div class="current-weather-text">
+        <h2>Currently</h2>
+        <h3>{{moment-format model.currently.time 'dddd MMM Do, h:mm' 'X'}}</h3>
+        <h4>Summary:</h4>
+        {{model.currently.summary}}
+        <h4>Temperature</h4>
+        {{model.currently.temperature}}
+    </div>
+</div>
+<h2>Week Summary</h2>
+<div class="daily-data-all">
+    {{#each model.daily.data as |day|}}
+        <div class="daily-weather-unit">
+            <img class="daily-weather-icon" src="{{day.icon}}.jpg" alt="">
+            <div class="daily-data-text">
+                <h3>{{moment-format day.time 'dddd MMM Do' 'X'}}</h3>
+                <h4>Summary:</h4>
+                {{day.summary}}
 
-{{/each}}
+                <h4>Precipitation:</h4>
+                {{day.precipType}}
+                {{day.precipProbability}}
+                {{day.precipIntensity}}
+
+                <h4>Low</h4>
+                {{day.temperatureMin}}
+                <h4>High</h4>
+                {{day.temperatureMax}}
+            </div>
+        </div>
+    {{/each}}
+</div>
+
+<h2>Hourly Summary</h2>
+<div class="hourly-data-all">
+    {{#each model.hourly.data as |hour|}}
+        <div class="hourly-weather-unit">
+            <img class="hourly-weather-icon" src="{{hour.icon}}.jpg" alt="">
+            <div class="hourly-data-text">
+                <h3>{{moment-format hour.time 'h a MMM Do' 'X'}}</h3>
+                <h4>Summary:</h4>
+                {{hour.summary}}
+
+                <h4>Precipitation:</h4>
+                {{hour.precipType}}
+                {{hour.precipProbability}}
+                {{hour.precipIntensity}}
+
+                <h4>Temperature</h4>
+                {{hour.temperature}}
+            </div>
+        </div>
+    {{/each}}
+</div>
+
 
 {{outlet}}

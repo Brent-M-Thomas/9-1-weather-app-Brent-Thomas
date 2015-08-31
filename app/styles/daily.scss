@@ -1,0 +1,36 @@
+.daily-data-all {
+    overflow-x: scroll;
+    overflow-y: hidden;
+    white-space: nowrap;
+    display: inline-block;
+    width: 100%;
+    height: 187px;
+}
+
+.daily-weather-unit {
+    display: inline-block;
+    position: relative;
+    height: 220px;
+}
+.daily-weather-icon {
+    height: 100%;
+    opacity: .7;
+    display: inline-block;
+}
+
+.daily-data-text {
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    margin-left: 2%;
+    margin-top: 2%;
+    line-height: 1;
+    white-space: normal;
+    h4 {
+        margin: 0;
+    }
+    h3 {
+        margin: 0;
+    }
+}

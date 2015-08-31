@@ -1,0 +1,36 @@
+// @import "reset";
+@import "bourbon";
+@import "neat";
+@import "daily";
+@import "hourly";
+
+html {
+    // background: url(/weather.jpg);
+    background: radial-gradient(circle, #FFEE4D,  30%, white, 70%, #5370FF)
+}
+
+
+a {
+    text-decoration: none;
+}
+
+.current-weather-all {
+    position: absolute;
+    right: 0;
+    top: 0;
+}
+
+.current-weather-icon {
+    height: 160px;
+    opacity: .7;
+}
+.current-weather-text {
+    position: absolute;
+    top: 0;
+    left: 0;
+    h2, h3, h4 {
+        margin: 0;
+    }
+}
+
+
