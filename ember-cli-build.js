@@ -3,6 +3,20 @@ var EmberApp = require('ember-cli/lib/broccoli/ember-app');
 
 module.exports = function(defaults) {
   var app = new EmberApp(defaults, {
+    fingerprint: {
+      exclude: [
+        'clear-day.jpg',
+        'clear-night.jpg',
+        'fog.jpg',
+        'partly-cloudy-day.jpg',
+        'partly-cloudy-night.jpg',
+        'rain.jpg',
+        'sleet.jpg',
+        'cloudy.jpg',
+        'weather.jpg',
+        'wind.jpg',
+      ]
+    }
     // Add options here
   });
 
